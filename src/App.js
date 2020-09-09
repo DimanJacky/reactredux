@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {add} from "./redux/actions/actions";
+import {add, asyncAdd} from "./redux/actions/actions";
 
 class App extends Component {
   render() {
@@ -8,6 +8,7 @@ class App extends Component {
         <div className="App">
           <p>{this.props.counter}</p>
           <button onClick={this.props.onAdd}>Добавить 1</button>
+          <button onClick={this.props.onAsyncAdd}>Добавить 1 через секунду</button>
         </div>
     )
   }
@@ -19,7 +20,8 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
   return {
-    onAdd: () => dispatch(add())
+    onAdd: () => dispatch(add()),
+    onAsyncAdd: () => dispatch(asyncAdd())
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App)
