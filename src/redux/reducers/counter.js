@@ -1,4 +1,4 @@
-import {ADD} from "../actions/actionTypes";
+import {ADD, ADD_NUMBER} from "../actions/actionTypes";
 
 const initialState = {
     counter: 0
@@ -10,6 +10,10 @@ export default function counter(state = initialState, action) {
         case ADD:
             return {
                 counter: state.counter + 1
+            }
+        case ADD_NUMBER:
+            return {
+                counter: state.counter + action.payload
             }
         default:
             return state

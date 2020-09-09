@@ -1,8 +1,15 @@
-import {ADD} from "./actionTypes";
+import {ADD, ADD_NUMBER} from "./actionTypes";
 
 export function add() {
     return {
         type: ADD
+    }
+}
+
+export function addNumber(number) {
+    return {
+        type: ADD_NUMBER,
+        payload: number
     }
 }
 
