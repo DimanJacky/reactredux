@@ -1,7 +1,11 @@
 import {combineReducers} from "redux";
+import { reducer as formReducer } from 'redux-form'
 
-import counter from "./reducers/counter";
+import counterReducer from "./reducers/counter";
+import dialogsReducer from "./reducers/dialogs-reducer";
 
 export default combineReducers({
-    counter
+    counterReducer,
+    dialogsReducer,
+    form: formReducer
 })

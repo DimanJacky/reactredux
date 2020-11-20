@@ -1,4 +1,4 @@
-import {ADD, ADD_NUMBER} from "./actionTypes";
+import {ADD, ADD_NUMBER, SEND_MESSAGE} from "./actionTypes";
 
 export function add() {
     return {
@@ -20,3 +20,5 @@ export function asyncAdd(number) {
         }, 1000)
     }
 }
+
+export const sendMessageCreator = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody});
