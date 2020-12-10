@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {add, addNumber, asyncAdd} from "./redux/actions/actions";
 import {bindActionCreators} from "redux";
 import Login from "./components/Login/Login";
-import Dialogs from "./components/Dialogs/Dialogs";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 class App extends Component {
