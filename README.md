@@ -33,3 +33,15 @@ const Dialogs = (props) => {
     </div>
 }
 ```
+
+4.Включаем в rootReducer редюсер формы, объявляем
+```
+import { reducer as formReducer } from 'redux-form'
+```
+И включаем
+```
+export default combineReducers({
+    counter,
+    form: formReducer
+})
+```
